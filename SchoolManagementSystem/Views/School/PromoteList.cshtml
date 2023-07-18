@@ -1,0 +1,214 @@
+﻿
+@{
+    ViewData["Title"] = "PromoteList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<button class="btn btn-success mt-4 mb-3"><a aps-controller="School" asp-action="StudentPromote" class="nav-link active">Promote Student</a></button>
+<div class=" container row mb-4" style="width:100%">
+    <div class="col-md-12">
+        <div style="border-top-width:10px;" class="card card-default border-top-10 border-info">
+            <div class="card-header">
+                <h2 class="card-title">All Students</h2>
+            </div>
+            <form>
+                <div class="card-body">
+                    <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <div class="row">
+                            <div class="col-sm-12 col-sm-6">
+                                <div class="col-sm-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-lg-10 col-sm-12 col-md-6">
+                                            <div class="dt-buttons btn-group flex-wrap">
+                                                <button class="btn btn-secondary buttons-copy buttons-html5" tabindex="0" aria-controls="example1" type="button"><span>Copy</span></button>
+                                                <button class="btn btn-secondary buttons-csv buttons-html5" tabindex="0" aria-controls="example1" type="button"><span>CSV</span></button>
+                                                <button class="btn btn-secondary buttons-excel buttons-html5" tabindex="0" aria-controls="example1" type="button"><span>Excel</span></button> <button class="btn btn-secondary buttons-pdf buttons-html5" tabindex="0" aria-controls="example1" type="button"><span>PDF</span></button> <button class="btn btn-secondary buttons-print" tabindex="0" aria-controls="example1" type="button"><span>Print</span></button>
+                                                <div class="btn-group"><button class="btn btn-secondary buttons-collection dropdown-toggle buttons-colvis" tabindex="0" aria-controls="example1" type="button" aria-haspopup="true"><span>Column visibility</span><span class="dt-down-arrow"></span></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-12 col-md-6">
+                                            <div id="example1_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example1"></label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <table id="example2" class="table table-striped table-hover dataTable dtr-inline" aria-describedby="example2_info">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sorting sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Promote ID : activate to sort column descending">Promote ID</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Student Name: activate to sort column ascending">Student Name</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Promote Date: activate to sort column ascending">Promote Date</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Promotion Fee: activate to sort column ascending">Promotion Fee</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Promotion Status: activate to sort column ascending">Promotion Status</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Fee Status : activate to sort column ascending">Fee Status</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Promote Class : activate to sort column ascending">Promote Class</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Class Section : activate to sort column ascending">Class Section</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Action : activate to sort column ascending">Class Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="odd">
+                                                    <td class="dtr-control sorting_1" tabindex="0">1</td>
+                                                    <td>Fatima Rahman</td>
+                                                    <td>20/10/2018</td>
+                                                    <td>1000</td>
+                                                    <td>
+                                                        <select class="form-control select2 select2-hidden-accessible col-7" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                            <option>Not Set</option>
+                                                            <option>True</option>
+                                                            <option>False</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="form-control select2 select2-hidden-accessible col-7" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                            <option>Not Set</option>
+                                                            <option>True</option>
+                                                            <option>False</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>Play Group</td>
+                                                    <td>A</td>
+                                                    <td><a href="" class="btn btn-primary">Edit</a><a href="" class="btn btn-info">Details</a></td>
+                                                </tr>
+                                                <tr class="odd">
+                                                    <td class="dtr-control sorting_1" tabindex="0">2</td>
+                                                    <td>Raihan</td>
+                                                    <td>20/10/2018</td>
+                                                    <td>1000</td>
+                                                    <td>
+                                                        <select class="form-control select2 select2-hidden-accessible col-7" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                            <option>Not Set</option>
+                                                            <option>True</option>
+                                                            <option>False</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="form-control select2 select2-hidden-accessible col-7" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                            <option>Not Set</option>
+                                                            <option>True</option>
+                                                            <option>False</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>2nd</td>
+                                                    <td>A</td>
+                                                    <td><a href="" class="btn btn-primary">Edit</a><a href="" class="btn btn-info">Details</a></td>
+                                                </tr>
+                                                <tr class="odd">
+                                                    <td class="dtr-control sorting_1" tabindex="0">3</td>
+                                                    <td>Tamanna</td>
+                                                    <td>24/10/2018</td>
+                                                    <td>1000</td>
+                                                    <td>
+                                                        <select class="form-control select2 select2-hidden-accessible col-7" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                            <option>Not Set</option>
+                                                            <option>True</option>
+                                                            <option>False</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="form-control select2 select2-hidden-accessible col-7" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                            <option>Not Set</option>
+                                                            <option>True</option>
+                                                            <option>False</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>2nd</td>
+                                                    <td>A</td>
+                                                    <td><a href="" class="btn btn-primary">Edit</a><a href="" class="btn btn-info">Details</a></td>
+                                                </tr>
+                                                <tr class="odd">
+                                                    <td class="dtr-control sorting_1" tabindex="0">2</td>
+                                                    <td>Rahman</td>
+                                                    <td>20/10/2018</td>
+                                                    <td>1000</td>
+                                                    <td>
+                                                        <select class="form-control select2 select2-hidden-accessible col-7" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                            <option>Not Set</option>
+                                                            <option>True</option>
+                                                            <option>False</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="form-control select2 select2-hidden-accessible col-7" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                            <option>Not Set</option>
+                                                            <option>True</option>
+                                                            <option>False</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>2nd</td>
+                                                    <td>A</td>
+                                                    <td><a href="" class="btn btn-primary">Edit</a><a href="" class="btn btn-info">Details</a></td>
+                                                </tr>
+                                                <tr class="odd">
+                                                    <td class="dtr-control sorting_1" tabindex="0">2</td>
+                                                    <td>Soshi</td>
+                                                    <td>20/10/2018</td>
+                                                    <td>1000</td>
+                                                    <td>
+                                                        <select class="form-control select2 select2-hidden-accessible col-7" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                            <option>Not Set</option>
+                                                            <option>True</option>
+                                                            <option>False</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="form-control select2 select2-hidden-accessible col-7" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                            <option>Not Set</option>
+                                                            <option>True</option>
+                                                            <option>False</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>2nd</td>
+                                                    <td>A</td>
+                                                    <td><a href="" class="btn btn-primary">Edit</a><a href="" class="btn btn-info">Details</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-9 col-sm-12 col-md-5">
+                                        <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-12 col-md-7">
+                                        <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
+                                            <ul class="pagination">
+                                                <li class="paginate_button page-item previous disabled" id="example1_previous">
+                                                    <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+                                                </li>
+                                                <li class="paginate_button page-item active">
+                                                    <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+                                                </li>
+                                                <li class="paginate_button page-item ">
+                                                    <a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0" class="page-link">2</a>
+                                                </li>
+                                                <li class="paginate_button page-item ">
+                                                    <a href="#" aria-controls="example1" data-dt-idx="3" tabindex="0" class="page-link">3</a>
+                                                </li>
+                                                <li class="paginate_button page-item ">
+                                                    <a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0" class="page-link">4</a>
+                                                </li>
+                                                <li class="paginate_button page-item ">
+                                                    <a href="#" aria-controls="example1" data-dt-idx="5" tabindex="0" class="page-link">5</a>
+                                                </li>
+                                                <li class="paginate_button page-item ">
+                                                    <a href="#" aria-controls="example1" data-dt-idx="6" tabindex="0" class="page-link">6</a>
+                                                </li>
+                                                <li class="paginate_button page-item next" id="example1_next">
+                                                    <a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0" class="page-link">Next</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,154 @@
+﻿@{
+    ViewData["Title"] = "GuardianRecord";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2 class="mt-3"><i class="fa fa-user-plus"></i>Student Information</h2>
+
+<div class="row mt-3" style="width:100%">
+    <div class="col-md-12">
+        <div class="card card-success">
+            <div class="card-header">
+            </div>
+            <form>
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="input-group input-group-lg">
+                                <input type="search" class="form-control form-control-lg" placeholder="Type your keywords here" value="Select Criteria">
+                                <div class="input-group-append">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label>Class</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>Class Play</option>
+                                        <option>Class Nursary</option>
+                                        <option>Class KG</option>
+                                        <option>Class ONE</option>
+                                        <option>Class Two</option>
+                                        <option>Class Three</option>
+                                        <option>Class Four</option>
+                                        <option>Class Five</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Section</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>Lily</option>
+                                        <option>Rose</option>
+                                        <option>Sunflower</option>
+                                        <option>Lotus</option>
+                                        <option>Tube Rose</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="Roll Number">Roll Number</label>
+                                    <input type="number" class="form-control" id="rollNumber">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-success ml-2">
+                                        <i class="fa fa-search"></i>
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@*<button class="btn btn-success mt-5 mb-3"><a asp-controller="School" asp-action="GuardianRecord" class="nav-link">Submit Salary</a></button>*@
+
+<div class="row mb-4" style="width:100%">
+    <div class="col-md-12">
+        <div style="border-top-width:10px;" class="card card-default border-top-10 border-info">
+            <div class="card-header">
+                <h2 class="card-title"><i class="fa fa-users"></i>Guardian Report</h2>
+            </div>
+            <form>
+                <div class="card-body">
+                    <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <div class="row">
+                            <div class="col-sm-12 col-sm-6">
+                                <div class="col-sm-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table id="example2" class="table table-bordered table-hover dataTable dtr-inline" aria-describedby="example2_info">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="sorting sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Class(Section) : activate to sort column descending">Class(Section)</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Admission Number: activate to sort column ascending">Admission Number</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Roll Number: activate to sort column ascending">Roll Number</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Student Name: activate to sort column ascending">Student Name</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Guardian Name: activate to sort column ascending">Guardian Name</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Guardian Relation: activate to sort column ascending">Guardian Relation</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Guardian Phone: activate to sort column ascending">Guardian Phone</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Father Name: activate to sort column ascending">Father Name</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Father Phone: activate to sort column ascending">Father Phone</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="odd">
+                                                        <td class="dtr-control sorting_1" tabindex="0">Dakhil-Seven(A)</td>
+                                                        <td>12544</td>
+                                                        <td>121151122</td>
+                                                        <td>Tamanna</td>
+                                                        <td>A</td>
+                                                        <td>Father</td>
+                                                        <td>000000000210</td>
+                                                        <td>Hanif</td>
+                                                        <td>02313213210</td>
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td class="dtr-control sorting_1" tabindex="0">Dakhil-Seven(A)</td>
+                                                        <td>12544</td>
+                                                        <td>121151122</td>
+                                                        <td>Tamanna</td>
+                                                        <td>A</td>
+                                                        <td>Father</td>
+                                                        <td>000000000210</td>
+                                                        <td>Hanif</td>
+                                                        <td>02313213210</td>
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td class="dtr-control sorting_1" tabindex="0">Dakhil-Seven(A)</td>
+                                                        <td>12544</td>
+                                                        <td>121151122</td>
+                                                        <td>Tamanna</td>
+                                                        <td>A</td>
+                                                        <td>Father</td>
+                                                        <td>000000000210</td>
+                                                        <td>Hanif</td>
+                                                        <td>02313213210</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

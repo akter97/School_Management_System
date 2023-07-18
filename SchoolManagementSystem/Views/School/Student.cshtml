@@ -1,0 +1,401 @@
+﻿
+@{
+    ViewData["Title"] = "Student";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row mt-3 mb-4" style="width:100%">
+    <div class="col-md-12">
+        <div class="card card-gray">
+            <div class="card-header">
+                <h2 class="card-title">Student Admission</h2>
+            </div>
+            <form>
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="Roll Number">Roll Number</label>
+                                <input type="number" class="form-control" id="rollNumber">
+                            </div>
+                            <div class="col-md-3">
+                                <label>Campus</label>
+                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                    <option selected="selected" data-select2-id="3">Select</option>
+                                    <option>Mirpur</option>
+                                    <option>Monipur</option>
+                                    <option>Danmondi</option>
+                                    <option>Gulsan</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Class</label>
+                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                    <option selected="selected" data-select2-id="3">Select</option>
+                                    <option>Class Play</option>
+                                    <option>Class Nursary</option>
+                                    <option>Class KG</option>
+                                    <option>Class ONE</option>
+                                    <option>Class Two</option>
+                                    <option>Class Three</option>
+                                    <option>Class Four</option>
+                                    <option>Class Five</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="First Name">First Name</label>
+                                    <input type="text" class="form-control" id="first_Name">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="Last Name">Last Name</label>
+                                    <input type="text" class="form-control" id="last_Name">
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Gender</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Shift</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>Morning</option>
+                                        <option>Day</option>
+                                        <option>Evening</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Session</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>(2019-2020-Science) Nursery to 8th</option>
+                                        <option>(2019-2020-Science) 9th to 8th</option>
+                                        <option>(2019-2020-Computer Science) 9th to 8th</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Religion</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>Muslims</option>
+                                        <option>Hindus</option>
+                                        <option>Christian</option>
+                                        <option>Buddhism</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Section</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>Lily</option>
+                                        <option>Rose</option>
+                                        <option>Sunflower</option>
+                                        <option>Lotus</option>
+                                        <option>Tube Rose</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label>Group</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>General</option>
+                                        <option>Science</option>
+                                        <option>Arts</option>
+                                        <option>Commerce</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="email">Email address</label>
+                                    <input type="email" class="form-control" id="email_Address">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="MobileNumber">Mobile Number</label>
+                                    <input type="text" class="form-control" id="mobile_Number">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="PresentAddress">Present address</label>
+                                    <input type="text" class="form-control" id="present_Address">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="ParmanentAddress">Parmanent address</label>
+                                    <input type="text" class="form-control" id="parmanent_Address">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Admission Date</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                        <input type="date" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" inputmode="numeric">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="StudentPhoto">Student Photo</label>
+                                    <input type="file" class="form-control" id="Student_Photo" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Date Of Birth</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                        <input type="date" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" inputmode="numeric">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="Nationality">Nationality</label>
+                                    <input type="text" class="form-control" id="Nationality" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="Previous_School">Previous School</label>
+                                    <input type="text" class="form-control" id="previous_School" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="GPA">GPA</label>
+                                    <input type="number" class="form-control" id="gpa" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Blood Group</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>A+</option>
+                                        <option>A-</option>
+                                        <option>B+</option>
+                                        <option>B-</option>
+                                        <option>AB+</option>
+                                        <option>AB-</option>
+                                        <option>O</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="BirthCertificate">Birth Certificate</label>
+                                    <input type="text" class="form-control" id="birth_Certificate">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="row mt-3 mb-4" style="width:100%">
+    <div class="col-md-12">
+        <div class="card card-gray">
+            <div class="card-header">
+                <h2 class="card-title">Parent Guardian Detail</h2>
+            </div>
+            <form>
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="FatherName">Father Name</label>
+                                <input type="text" class="form-control" id="fatherName">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="FatherPhone">Father Phone</label>
+                                <input type="text" class="form-control" id="fatherPhone">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="FatherEmail">Father Email</label>
+                                <input type="email" class="form-control" id="fatherEmail">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="FatherNid">Father Nid</label>
+                                <input type="text" class="form-control" id="Father_Nid" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Father Blood Group</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>A+</option>
+                                        <option>A-</option>
+                                        <option>B+</option>
+                                        <option>B-</option>
+                                        <option>AB+</option>
+                                        <option>AB-</option>
+                                        <option>O</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Father Occupation</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>Teacher</option>
+                                        <option>Doctor</option>
+                                        <option>Driver</option>
+                                        <option>Businessman</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="FatherPhoto">Father Photo</label>
+                                    <input type="file" class="form-control" id="Father_Photo" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="MotherName">Mother Name</label>
+                                    <input type="text" class="form-control" id="motherName">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="MotherPhone">Mother Phone</label>
+                                    <input type="text" class="form-control" id="motherPhone">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="MotherEmail">Mother Email</label>
+                                    <input type="email" class="form-control" id="motherEmail">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="MotherNid">Mother Nid</label>
+                                    <input type="text" class="form-control" id="mother_Nid" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Mother Blood Group</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>A+</option>
+                                        <option>A-</option>
+                                        <option>B+</option>
+                                        <option>B-</option>
+                                        <option>AB+</option>
+                                        <option>AB-</option>
+                                        <option>O</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label>Mother Occupation</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>HouseWife</option>
+                                        <option>Teacher</option>
+                                        <option>Doctor</option>
+                                        <option>Driver</option>
+                                        <option>Businessman</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="MotherPhoto">Mother Photo</label>
+                                    <input type="file" class="form-control" id="Mother_Photo" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <label>If Guardian Is: </label>	&nbsp;	&nbsp;	&nbsp;	&nbsp;
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radio1">
+                                    <label class="form-check-label">Father</label> &nbsp;	&nbsp;	&nbsp; &nbsp;	&nbsp;	&nbsp;
+                                    <input class="form-check-input" type="radio" name="radio1" checked="">
+                                    <label class="form-check-label">Mother</label> &nbsp;	&nbsp;	&nbsp; &nbsp;	&nbsp;	&nbsp;
+                                    <input class="form-check-input" type="radio" name="radio1" checked="">
+                                    <label class="form-check-label">Others</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="GuardianName">Guardian Name</label>
+                                    <input type="text" class="form-control" id="guardianName">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="GuardianRelation">Guardian Relation</label>
+                                    <input type="text" class="form-control" id="guardianRelation">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="GuardianEmail">Guardian Email</label>
+                                    <input type="email" class="form-control" id="guardianEmail">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="GuardianPhoto">Guardian Photo</label>
+                                    <input type="file" class="form-control" id="Guardian_Photo" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="GuardianPhone">Guardian Phone</label>
+                                    <input type="number" class="form-control" id="guardianPhone">
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Guardian Occupation</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>HouseWife</option>
+                                        <option>Teacher</option>
+                                        <option>Doctor</option>
+                                        <option>Driver</option>
+                                        <option>Businessman</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="GuardianAddress">Guardian Address</label>
+                                    <input type="text" class="form-control" id="guardianAddress">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary">Save Record</button>
+                            <a href="StudentList" class="ml-3 btn btn-outline-info">Back To List</a>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

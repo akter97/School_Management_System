@@ -1,0 +1,127 @@
+﻿@{
+    ViewData["Title"] = "Teacher Insert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var listTeacher = ViewData["List"] as List<SchoolManagementSystem.Models.Teacher>;
+
+
+
+}
+
+
+<div class="row mt-5 mb-4 float-right" style="width:90%">
+    <div class="col-md-12 ">
+        <div class="card card-gray">
+            <div class="card-header">
+                <h2 class="card-title">New Teacher Information</h2>
+            </div>
+            <form asp-action="TeacherInsert" method="post">
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <input type="hidden" name="TeacherId" value=""  />
+                            <div class="col-md-3">
+                                <label for="First Name">First Name</label>
+                                <input type="text" name="FirstName" placeholder="First Name" />
+                            </div>
+                            <div class="col-md-3">
+                                <label for="Last Name">Last Name</label>
+                                <input type="text" name="LastName" placeholder="Last Name"  />
+
+                            </div>
+                            <div class="col-md-3">
+                                <label for="Photo">Photo</label>
+                                <input type="file" name="Photo"  />
+                            </div>
+                            <div class="col-md-3">
+                                <label>Gender</label>
+                                <select name="Gender" class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true" >
+                                    <option selected="selected" data-select2-id="3">Select</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label>Marital Status</label>
+                                    <select name="MaritalStatus" class="form-control select2 select2-hidden-accessible"  style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option value="Married">Married</option>
+                                        <option value="UnMarried">UnMarried</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label>Date Of Birth</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                        <input type="date" class="form-control" name="DateOfBirth" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" inputmode="numeric">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Religion</label>
+                                    <select name="Religion" class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true" >
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option value="Muslim">Muslims</option>
+                                        <option value="Hindu">Hindus</option>
+                                        <option value="Christian">Christian</option>
+                                        <option value="Buddhism">Buddhism</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="Nid">National Id</label>
+                                    <input type="text" class="form-control" id="Nid" name="Nid" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="Email">Email address</label>
+                                    <input type="email" class="form-control" id="Email" name="Email" 
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="Phone">Mobile Number</label>
+                                    <input type="text" class="form-control" id="Phone" name="Phone" >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="Qualification">Qualification</label>
+                                    <input type="text" class="form-control" id="Qualification" name="Qualification" >
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="Salary">Salary</label>
+                                    <input type="number" class="form-control" id="Salary" name="Salary"  />
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="Nationality">Nationality</label>
+                                    <input type="text" class="form-control" id="Nationality" name="Nationality" />
+                                </div>
+
+
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <button class="btn btn-primary">Save Record</button>
+                            <a href="Teacher" class="ml-3 btn btn-outline-info">Back To List</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

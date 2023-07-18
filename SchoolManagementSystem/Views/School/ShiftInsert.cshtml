@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "ShiftInsert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ShiftInsert</h1>
+
+<form asp-action="ShiftInsert" method="post">
+    <input type="hidden" name="ShiftId"/>
+    <input type="text" name="ShiftName" placeholder="Shift Name"/><br />
+    <input type="text" name="ShiftType" placeholder="Shift Type"/><br />
+    <input type="text" name="StartTime" placeholder="Start Time" /><br />
+    <input type="text" name="EndTime" placeholder="End Time" /><br />
+    <button type="submit">Save</button>
+</form>

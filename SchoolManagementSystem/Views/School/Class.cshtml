@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewData["Title"] = "Class";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row mt-4 mb-4" style="width:100%">
+    <div class="col-md-12">
+        <div class="card card-gray">
+            <div class="card-header">
+                <h2 class="card-title">Set Class Subject</h2>
+            </div>
+            <form>
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>Select Class</label>
+                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                    <option selected="selected" data-select2-id="3">Select</option>
+                                    <option>Nursery</option>
+                                    <option>1st</option>
+                                    <option>2nd</option>
+                                    <option>3rd</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Select Subject</label>
+                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                    <option selected="selected" data-select2-id="3">Select</option>
+                                    <option>Maths</option>
+                                    <option>English</option>
+                                    <option>Biology</option>
+                                    <option>Bangla</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="Title">Class Subject</label>
+                                <input type="text" class="form-control" id="class_Subject" placeholder="Enter Class Subject" />
+                            </div>
+                            <div class="col-md-3">
+                                <label for="Title">Title</label>
+                                <input type="text" class="form-control" id="Title" />
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <label>Status</label>
+                                        <select class="form-control select2 select2-hidden-accessible col-md-" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                            <option>Not Set</option>
+                                            <option>True</option>
+                                            <option>False</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group ml-3 mt-3">
+                                <button class="btn btn-success">Create</button>
+                                <a href="ClassSubject" class="ml-2 btn btn-outline-warning">Back to list</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

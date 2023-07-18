@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "BranchInsert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>BranchInsert</h1>
+<form asp-action="BranchInsert" method="post">
+<input type="hidden" name="BranchId"/>
+<input type="text" name="BranchName" placeholder="Branch Name"/><br/>
+<input type="text" name="BranchLocation" placeholder="Branch Location"/><br/>
+<button type="submit">Add</button>
+</form>

@@ -1,0 +1,177 @@
+﻿
+@{
+    ViewData["Title"] = "Staff";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="row mt-5 mb-4" style="width:100%">
+    <div class="col-md-12">
+        <div class="card card-gray">
+            <div class="card-header">
+                <h2 class="card-title">Employee Information</h2>
+            </div>
+            <form>
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="Name">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter Full Name">
+                                </div>     
+                                 <div class="col-md-4">
+                                    <label>Designation</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>Principle</option>
+                                        <option>Vice Priciple</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="Photo">Photo</label>
+                                    <input type="file" class="form-control" id="photo" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label>Gender</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="Qualification ">Qualification </label>
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="DataofBirth">Date of Birth</label>
+                                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                        <input type="date" class="form-control datetimepicker-input">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email_Address">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="contactNo">Contact No</label>
+                                    <input type="number" class="form-control" id="mobile_Number">
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Religion</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>Muslim</option>
+                                        <option>Hindu</option>
+                                        <option>Christian</option>
+                                        <option>Buddhism</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>                              
+                                <div class="col-md-3">
+                                    <label for="AssignedTo">AssignedTo</label>
+                                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                        <input type="date" class="form-control datetimepicker-input">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">                                
+                                <div class="col-md-4">
+                                    <label>Blood Group</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>A+</option>
+                                        <option>A-</option>
+                                        <option>B+</option>
+                                        <option>B-</option>
+                                        <option>AB+</option>
+                                        <option>AB-</option>
+                                        <option>O+</option>
+                                        <option>O-</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="HomePhoneNo">Home Phone No</label>
+                                    <input type="number" class="form-control" id="homePhoneNumber">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="BasicSalary">Basic Salary</label>
+                                    <input type="number" class="form-control" id="basic_Salary">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <label>Address</label>
+                                <textarea class="form-control" rows="4"></textarea>
+                            </div>                               
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                   <label>Do you have any disability</label><br />
+                                   <input type="checkbox" />
+                            </div>
+                            <div class="col-md-6">
+                                    <label>If yes then give details</label>
+                                    <textarea class="form-control" rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Are you taking any medication</label><br />
+                                    <input type="checkbox" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label>If yes then give details</label>
+                                    <textarea class="form-control" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                           <div class="row">
+                                <div class="col-md-6">
+                                   <label>Do you have any policy record</label><br />
+                                   <input type="checkbox" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label>If yes then give details</label>
+                                    <textarea class="form-control" rows="4"></textarea>
+                                </div>
+                            </div>                           
+                        </div>
+                        <div>
+                            <button class="btn btn-primary">Save Record</button>
+                            <a href="StuffList" class="ml-3 btn btn-outline-info">Back To List</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

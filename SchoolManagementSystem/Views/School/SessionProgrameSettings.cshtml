@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewData["Title"] = "SessionProgrameSettings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row mt-4 mb-4" style="width:100%">
+    <div class="col-md-12">
+        <div class="card card-gray">
+            <div class="card-header">
+                <h2 class="card-title">New Session</h2>
+            </div>
+            <form>
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="Session">Session</label>
+                                <input type="text" class="form-control" id="session">
+                            </div>
+                            <div class="col-md-4">
+                                <label>Select Start Date</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                    </div>
+                                    <input type="date" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" inputmode="numeric">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Select End Date</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                    </div>
+                                    <input type="date" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" inputmode="numeric">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group ml-3 mt-3">
+                                <button class="btn btn-success">Create</button>
+                                <a href="Session" class="ml-2 btn btn-outline-info">Back to list</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

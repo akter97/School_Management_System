@@ -1,0 +1,27 @@
+﻿@model IEnumerable<SchoolManagementSystem.Models.Shift>
+@{
+    ViewData["Title"] = "Shift";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Shift</h1>
+
+<a class="nav-link text-dark" asp-area="" asp-controller="School" asp-action="ShiftInsert">Create new Shift</a><br />
+
+<table class="table table-bordered table-responsive table-striped">
+    <thead>
+        <th>Shift Name</th>
+        <th>Shift Type</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+    </thead>
+    @foreach(var list in Model)
+    {
+        <tr>
+            <td>@list.ShiftName</td>
+            <td>@list.ShiftType</td>
+            <td>@list.StartTime</td>
+            <td>@list.EndTime</td>
+        </tr>
+    }
+</table>
