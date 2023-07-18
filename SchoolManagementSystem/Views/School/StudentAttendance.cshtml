@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewData["Title"] = "StudentAttendance";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row mt-5 mb-4" style="width:100%">
+    <div class="col-md-12">
+        <div class="card card-gray">
+            <div class="card-header">
+                <h2 class="card-title">Student Attendance</h2>
+            </div>
+            <form>
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <input type="number" class="form-control" id="studentPromotionId" placeholder="Enter Promotion Id">
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-info">Find</button>
+                            </div>
+                        </div>
+                        <hr /> <hr />
+
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label>Select Student</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>Umme</option>
+                                        <option>Reba</option>
+                                        <option>Mili</option>
+                                        <option>Soshi</option>
+                                        <option>Jannat</option>
+                                        <option>Fatima</option>
+                                        <option>Hamza</option>
+                                        <option>Adnan fayaz</option>
+                                        <option>Samima</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Select Class</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>Play Group</option>
+                                        <option>Nursery</option>
+                                        <option>1st</option>
+                                        <option>2nd</option>
+                                        <option>3rd</option>
+                                        <option>4th</option>
+                                        <option>5th</option>
+                                        <option>6th</option>
+                                        <option>7th</option>
+                                        <option>8th</option>
+                                        <option>9th</option>
+                                        <option>10th</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Select Student Session</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option>(2019-2020-Science) Nursery to 8th</option>
+                                        <option>(2019-2020-Science) 9th to 8th</option>
+                                        <option>(2019-2020-Computer Science) 9th to 8th</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Attend Date</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                        <input type="date" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" inputmode="numeric">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Attend Time</label>
+                                    <div class="input-group">
+                                        <input type="time" class="form-control" data-inputmask-alias="time" data-mask="" inputmode="numeric">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group ml-3">
+                            <button class="btn btn-success">Save Record</button>
+                            <a href="AttendanceList" class=" ml-4 btn btn-outline-warning">Back</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

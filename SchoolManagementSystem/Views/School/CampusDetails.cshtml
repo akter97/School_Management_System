@@ -1,0 +1,40 @@
+﻿@model SchoolManagementSystem.ViewModel.ViewCampus;
+@{
+    ViewData["Title"] = "CampusDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>CampusDetails</h1>
+
+<table class="table table-bordered table-responsive table-striped">
+    <thead>
+        <th>Campus Name</th>
+        <th>Branch Name</th>
+        <th>Branch Location</th>
+        <th>Campus Location</th>
+    </thead>
+    <tr>
+        <td>@Model.CampusName</td>
+        <td>@Model.BranchName</td>
+        <td>@Model.BranchLocation</td>
+        <td>@Model.Location</td>
+    </tr>
+</table><br /><br /><br />
+
+<table class="table table-bordered table-responsive table-striped">
+    <thead>
+        <th>Shift</th>
+        <th>Shift Type</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+    </thead>
+    @foreach(var list in Model.Shifts)
+    {
+        <tr>
+            <td>@list.ShiftName</td>
+            <td>@list.ShiftType</td>
+            <td>@list.StarTime</td>
+            <td>@list.EndTime</td>
+        </tr>
+    }
+</table>

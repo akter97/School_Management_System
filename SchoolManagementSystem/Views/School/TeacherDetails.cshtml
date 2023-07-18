@@ -1,0 +1,215 @@
+﻿@*@model SchoolManagementSystem.ViewModel.ViewTeacher;
+@{
+    ViewData["Title"] = "TeacherDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var listTeacher = ViewData["List"] as List<SchoolManagementSystem.Models.Teacher>;
+
+}
+
+<h1>TeacherDetails</h1>
+
+<table id="example2" class="table table-bordered table-hover dataTable dtr-inline" aria-describedby="example2_info">
+    <thead>
+        <tr>
+            <th class="sorting sorting_asc" tabindex="0" rowspan="1" colspan="1" aria-controls="example2" aria-sort="ascending" aria-label="Teacher ID : activate to sort column descending">Teacher ID</th>
+            <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-controls="example2" aria-label="Teacher Name: activate to sort column ascending">Teacher Name</th>
+            <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-controls="example2" aria-label="Contact No: activate to sort column ascending">Contact No</th>
+            <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-controls="example2" aria-label="Contact No: activate to sort column ascending">Email</th>
+            <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-controls="example2" aria-label="Photo: activate to sort column ascending">Photo</th>
+            <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-controls="example2" aria-label="Gender: activate to sort column ascending">Gender</th>
+            <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-controls="example2" rowspan="1" colspan="1" aria-label="Qualification : activate to sort column ascending">Qualification</th>
+            <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-controls="example2" rowspan="1" colspan="1" aria-label="MaritalStatus : activate to sort column ascending">MaritalStatus</th>
+            <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-controls="example2" rowspan="1" colspan="1" aria-label="DateOfBirth : activate to sort column ascending">DateOfBirth</th>
+            <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-controls="example2" rowspan="1" colspan="1" aria-label="NID : activate to sort column ascending">National Id</th>
+            <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-controls="example2" rowspan="1" colspan="1" aria-label="Religion : activate to sort column ascending">Religion</th>
+            <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-controls="example2" rowspan="1" colspan="1" aria-label="Nationality : activate to sort column ascending">Nationality</th>
+            <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-controls="example2" rowspan="1" colspan="1" aria-label="Salary : activate to sort column ascending">Basic Salary</th>
+            <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-controls="example2" rowspan="1" colspan="1" aria-label="Action : activate to sort column ascending">Action</th>
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var list in listTeacher)
+        {
+            <tr class="odd">
+                <td class="dtr-control sorting_1" tabindex="0">@list.TeacherId</td>
+                sc .
+                <td>@list.FirstName @list.LastName</td>
+                <td>@list.Phone</td>
+                <td>@list.Email</td>
+                <td><img src="" width="100px" height="100px" />@list.Photo</td>
+                <td>@list.Gender</td>
+                <td>@list.Qualification</td>
+                <td>@list.MaritalStatus</td>
+                <td>@list.DateOfBirth</td>
+                <td>@list.Nid</td>
+                <td>@list.Religion</td>
+                <td>@list.Nationality</td>
+                <td>@list.Salary</td>
+
+                <td>
+                    <a class="btn btn-primary" href="/School/TeacherDetails?id=@list.TeacherId&actionName=Details">Details</a>
+                    <a class="btn btn-info" href="/School/TeacherDetails?id=@list.TeacherId&actionName=Update">Edit</a>
+                    <a class="btn btn-danger" href="/School/DeleteTeacher?id=@list.TeacherId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<br />
+<br />
+@*
+<table class="table table-bordered table-responsive table-striped">
+    <thead>
+    <th>Shift</th>
+    <th>Shift Type</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+    </thead>
+    @foreach (var list in Model.Shifts)
+    {
+        <tr>
+            <td>@list.ShiftName</td>
+            <td>@list.ShiftType</td>
+            <td>@list.StarTime</td>
+            <td>@list.EndTime</td>
+        </tr>
+    }
+</table>*@
+
+
+
+@model SchoolManagementSystem.ViewModel.ViewTeacher;
+@{
+    ViewData["Title"] = "Teacher Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var listTeacher = ViewData["List"] as List<SchoolManagementSystem.Models.Teacher>;
+
+
+
+}
+
+
+<div class="row mt-5 mb-4 float-right" style="width:90%">
+    <div class="col-md-12 ">
+        <div class="card card-gray">
+            <div class="card-header">
+                <h2 class="card-title">@Model.FirstName @Model.LastName</h2>
+            </div>
+            <form asp-action="TeacherDetails" method="get">
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <input type="hidden" name="TeacherId" value="@Model.TeacherId" />
+                            <div class="col-md-3">
+                                <label for="First Name">First Name</label>
+                                <input type="text" name="FirstName" placeholder="First Name" value="@Model.FirstName" />
+                            </div>
+                            <div class="col-md-3">
+                                <label for="Last Name">Last Name</label>
+                                <input type="text" name="LastName" placeholder="Last Name" value="@Model.LastName" />
+
+                            </div>
+                            <div class="col-md-3">
+                                <label for="Photo">Photo</label>
+                                <input type="file" name="Photo" value="@Model.Photo" />
+                            </div>
+                            <div class="col-md-3">
+                                <label>Gender</label>
+                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true" value="@Model.Gender">
+                                    <option selected="selected" data-select2-id="3">Select</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label>Marital Status</label>
+                                    <select class="form-control select2 select2-hidden-accessible" value="@Model.MaritalStatus" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option value="Married">Married</option>
+                                        <option value="UnMarried">UnMarried</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label>Date Of Birth</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                        <input type="date" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" inputmode="numeric" value="@Model.DateOfBirth">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Religion</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true" value="@Model.Religion">
+                                        <option selected="selected" data-select2-id="3">Select</option>
+                                        <option value="Muslim">Muslims</option>
+                                        <option value="Hindu">Hindus</option>
+                                        <option value="Christian">Christian</option>
+                                        <option value="Buddhism">Buddhism</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="Nid">National Id</label>
+                                    <input type="file" class="form-control" id="Nid" value="@Model.Nid" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="Email">Email address</label>
+                                    <input type="email" class="form-control" id="Email" name="Email" value="@Model.Email
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="Phone">Mobile Number</label>
+                                    <input type="text" class="form-control" id="Phone" value="@Model.Phone">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="Qualification">Qualification</label>
+                                    <input type="text" class="form-control" id="Qualification" value="@Model.Qualification">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="Salary">Salary</label>
+                                    <input type="number" class="form-control" id="Salary" value="@Model.Salary" />
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="Nationality">Nationality</label>
+                                    <input type="text" class="form-control" id="Nationality" value="@Model.Nationality" />
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary">Update Record</button>
+                            <a href="Teacher" class="ml-3 btn btn-outline-info">Back To List</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+

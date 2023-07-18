@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "CampusInsert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var Branch = ViewData["Branch"] as List<SchoolManagementSystem.Models.Branch>;
+    var Shift = ViewData["Shift"] as List<SchoolManagementSystem.Models.Shift>;
+    var Curriculum = ViewData["Curriculum"] as List<SchoolManagementSystem.Models.Curriculum>;
+}
+
+<h1>CampusInsert</h1>
+
+<form asp-action="CampusInsert" method="post">
+    <input type="text" name="CampusName" placeholder="Campus Name"/><br />
+    <input type="text" name="Location" placeholder="Campus Location"/><br />
+
+
+
+    <lable>Branch</lable><br />
+    <select name="BranchId">
+        <option value="">Select Branch</option>
+        @foreach(var list in Branch)
+        {
+            <option value="@list.BranchId">@list.BranchName</option>
+        }
+    </select><br />
+
+
+
+    <lable>Shift</lable><br />
+    <select id="ShiftDropDown">
+        <option value="">Select Shift</option>
+        @foreach (var list in Shift)
+        {
+            <option value="@list.ShiftId">@list.ShiftName</option>
+        }
+    </select><br /><br />
+    <button type="button" onclick="addShift();">Add Shift</button>
+    <table id="shift" style="display:none"></table>
+
+
+
+    <lable>Curriculum</lable><br />
+    <select id="CurriculumDropDown">
+        <option value="">Select Curriculum</option>
+        @foreach (var list in Curriculum)
+        {
+            <option value="@list.CurriculumId">@list.CurriculumName</option>
+        }
+    </select><br /><br />
+    <button type="button" onclick="addCurriculum();">Add Curriculum</button><br />
+    <table id="curriculum" style="display:none"></table>
+
+
+
+    <button type="submit">Save</button><br />
+</form>
+
+<script>
+    function addShift() {
+        event.preventDefault();
+        data = document.getElementById('ShiftDropDown').value;
+        document.getElementById('shift').innerHTML += '<tr><td><input type="text" name="ShiftId" value="' + data + '"/></td></tr>';
+        document.getElementById('shift').style.display = "";
+    }
+    function addCurriculum() {
+        event.preventDefault();
+        data = document.getElementById('CurriculumDropDown').value;
+        document.getElementById('curriculum').innerHTML += '<tr><td><input type="text" name="CurriculumId" value="' + data + '"/></td></tr>';
+        document.getElementById('curriculum').style.display = "";
+    }
+</script>

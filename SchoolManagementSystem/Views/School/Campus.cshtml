@@ -1,0 +1,25 @@
+﻿@model IEnumerable<SchoolManagementSystem.Models.Campus>;
+@{
+    ViewData["Title"] = "Campus";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Campus</h1>
+
+<table class="table table-bordered table-responsive table-striped">
+    <thead>
+        <th>Campus Name</th>
+        <th>Campus location</th>
+    </thead>
+    @foreach(var list in Model)
+    {
+        <tr>
+            <td>@list.CampusName</td>
+            <td>@list.Location</td>
+            <td><a href="/School/CampusDetails?id=@list.CampusId&actionName=Details">Details</a></td>
+            <td><a href="/School/CampusDetails?id=@list.CampusId&actionName=Update">Edit</a></td>
+            <td><a href="/School/DeleteCampus?id=@list.CampusId">Delete</a></td>
+        </tr>
+    }
+</table>
+

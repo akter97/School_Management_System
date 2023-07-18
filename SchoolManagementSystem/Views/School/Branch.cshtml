@@ -1,0 +1,21 @@
+﻿@model IEnumerable<SchoolManagementSystem.Models.Branch>
+@{
+    ViewData["Title"] = "Branch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Branch</h1>
+<a asp-action="BranchInsert" method="get">Create New Branch</a><br /><br /><br />
+<table class="table table-bordered table-responsive table-striped">
+    <thead>
+        <th>Branch Name</th>
+        <th>Branch Location</th>
+    </thead>
+    @foreach(var list in Model)
+    {
+        <tr>
+            <td>@list.BranchName</td>
+            <td>@list.BranchLocation</td>
+        </tr>
+    }
+</table>

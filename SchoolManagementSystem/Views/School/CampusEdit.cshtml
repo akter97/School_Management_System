@@ -1,0 +1,108 @@
+﻿@model SchoolManagementSystem.ViewModel.ViewCampus;
+
+@{
+    ViewData["Title"] = "CampusEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var Branch = ViewData["Branch"] as List<SchoolManagementSystem.Models.Branch>;
+    var Shift = ViewData["Shift"] as List<SchoolManagementSystem.Models.Shift>;
+    var Curriculum = ViewData["Curriculum"] as List<SchoolManagementSystem.Models.Curriculum>;
+}
+
+<h1>Campus Edit</h1>
+
+<form asp-action="CampusUpdate" method="post">
+    <input type="hidden" name="CampusId" value="@Model.CampusId"/>
+    <input type="text" name="CampusName" placeholder="Campus Name" value="@Model.CampusName" /><br />
+    <input type="text" name="Location" placeholder="Campus Location" value="@Model.Location" /><br />
+
+
+
+    <lable>Branch</lable><br />
+    <select name="BranchId">
+        <option value="@Model.BranchId">@Model.BranchName</option>
+        @foreach (var list in Branch)
+        {
+            <option value="@list.BranchId">@list.BranchName</option>
+        }
+    </select><br />
+
+
+
+    <lable>Shift</lable><br />
+    <select id="ShiftDropDown">
+        <option value="">Select Shift</option>
+        @foreach (var list in Shift)
+        {
+            <option value="@list.ShiftId">@list.ShiftName</option>
+        }
+    </select><br /><br />
+    <button type="button" onclick="addShift();">Add Shift</button>
+    <table id="shift" class="table table-bordered table-responsive table-striped">
+        <thead>
+            <th>ShiftName</th>
+            <th>ShiftType</th>
+        </thead>
+        @foreach(var list in Model.Shifts)
+        {
+           <tr>
+               <td>
+                    <select name="ShiftId">
+                        <option value="@list.ShiftId">@list.ShiftName</option>
+                        @foreach (var item in Shift)
+                        {
+                            <option value="@item.ShiftId">@item.ShiftName</option>
+                        }
+                    </select>
+                </td>
+                <td>@list.ShiftType</td>
+           </tr> 
+        }
+    </table>
+
+
+
+    <lable>Curriculum</lable><br />
+    <select id="CurriculumDropDown">
+        <option value="">Select Curriculum</option>
+        @foreach (var list in Curriculum)
+        {
+            <option value="@list.CurriculumId">@list.CurriculumName</option>
+        }
+    </select><br /><br />
+    <button type="button" onclick="addCurriculum();">Add Curriculum</button><br /><br />
+    <table id="curriculum" class="table table-borderd table-striped table-responsive">
+        <thead>
+            <th>Curriculum Name</th>
+        </thead>
+        @foreach(var list in Model.Curriculums)
+        {
+            <tr>
+                <td>
+                    <select name="CurriculumId">
+                        <option value="@list.CurriculumId">@list.CurriculumName</option>
+                        @foreach (var item in Curriculum)
+                        {
+                            <option value="@item.CurriculumId">@item.CurriculumName</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+        }
+    </table>
+    <button type="submit">Update</button>
+</form><br /><br /><br />
+
+<script>
+    function addShift() {
+        event.preventDefault();
+        data = document.getElementById('ShiftDropDown').value;
+        document.getElementById('shift').innerHTML += '<tr><td><input type="text" name="ShiftId" value="' + data + '"/></td></tr>';
+        document.getElementById('shift').style.display = "";
+    }
+    function addCurriculum() {
+        event.preventDefault();
+        data = document.getElementById('CurriculumDropDown').value;
+        document.getElementById('curriculum').innerHTML += '<tr><td><input type="text" name="CurriculumId" value="' + data + '"/></td></tr>';
+        document.getElementById('curriculum').style.display = "";
+    }
+</script>

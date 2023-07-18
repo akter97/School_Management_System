@@ -1,0 +1,11 @@
+﻿@model IEnumerable<SchoolManagementSystem.Models.Curriculum>;
+@{
+    ViewData["Title"] = "Curriculum";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Curriculum</h1><br />
+<a asp-controller="School" asp-action="CurriculumInsert">Create New Curriculum</a><br />
+@foreach(var list in Model) {
+    <p>@list.CurriculumName</p>
+}

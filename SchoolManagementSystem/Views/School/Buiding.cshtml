@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Buiding";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var Campus = ViewData["Campus"] as List<SchoolManagementSystem.Models.Campus>;
+}
+
+<h1>Buiding</h1>
+
+<form asp-action="Building" method="post">
+    <input type="hidden" name="BuildingId" />
+    <input type="text" placeholder="Building Name" name="BuildingName" /><br />
+    <select name="CampusId">
+        <option value="">Select Campus</option>
+        @foreach (var list in Campus)
+        {
+            <optoin value="@list.CampusId">@list.CampusName</optoin>
+        }
+    </select><br />
+    <button type="submit">Save</button>
+</form>
