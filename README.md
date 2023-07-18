@@ -1,7 +1,7 @@
 # School Management System
 School Management System, is an open source project for people who wants to grab the core idea of the data process within the system.
 
-This system is built with CodeIgniter – PHP framework, bootstrap, and jquery. This system, School Management System, is based on the Web Application. It provides advanced functionality run the daily basic requirement for the school program. The system can be manipulated by one user as an admin.
+This system is built with CodeIgniter – Asp.net Core framework, bootstrap, and jquery. This system, School Management System, is based on the Web Application. It provides advanced functionality run the daily basic requirement for the school program. The system can be manipulated by one user as an admin.
 
 This application, there are some dependencies you will need to understand. For example, you want to add the section for a class. Without class information, the section information cannot be added to the system. Similarly, these concepts apply to the subject, student, and etc. Without any class and section, the subject, and student information cannot be created by the system.
 
